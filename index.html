@@ -23,5 +23,32 @@
         казаться чем-то страшным.
       </p>
     </section>
+    <section>
+      <h2>Дополнительно</h2>
+      <p>
+        Подключен Hexlet-Correction.
+      </p>
+    </section>
+    
+    <script>
+    function loadScript(src, callback) {
+      const body = document.querySelector('body')
+      const script = document.createElement('script');
+      script.src = src;
+      script.onload = callback;
+      body.appendChild(script);
+    };
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      const scriptSrc = 'https://cdn.jsdelivr.net/gh/hexlet/hexlet-correction@latest/src/widget/index.js?v=' + new Date().getTime();
+      loadScript(scriptSrc, function () {
+        handleTypoReporter({
+          authorizationToken: 'MzI6NzRkMzBjZWUtN2U5Yy00Nzc2LTgyNTQtNmU3YmZiYjgyZDUy',
+          workSpaceUrl: 'http://localhost:8080',
+          workSpaceId: '32'})
+      });
+    });
+    </script>
+    
   </main>
   
